@@ -15,11 +15,19 @@ Route::get('/', function () {
     $tasks = [
       'Go to the store',
       'Go to the market',
-      'Go to work'
+      'Go to work',
+      'Go to the concert'
     ];
 
     return view('welcome', [
-      'tasks' => $tasks
+      //Array
+      'tasks' => $tasks,
+
+      // Single string
+      // 'foo' => 'foobar'
+
+      //Request
+      'foo' => request('title')
     ]);
 });
 
