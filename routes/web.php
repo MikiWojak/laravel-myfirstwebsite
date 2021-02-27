@@ -23,11 +23,8 @@ Route::get('/', function () {
       //Array
       'tasks' => $tasks,
 
-      // Single string
-      // 'foo' => 'foobar'
-
-      //Request
-      'foo' => request('title')
+      // JS
+      'foo' => '<script>alert("foobar")</script>'
     ]);
 });
 
