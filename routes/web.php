@@ -12,14 +12,9 @@
 */
 
 Route::get('/', function () {
-    $tasks = [
-      'Go to the store',
-      'Go to the market',
-      'Go to work',
-      'Go to the concert'
-    ];
-
-    return view('welcome')->withTasks($tasks)->withFoo('foo');
+    return view('welcome', [
+      'foo' => 'foobar'
+    ]);
 });
 
 Route::get('/about', function () {
