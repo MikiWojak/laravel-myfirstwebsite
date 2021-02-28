@@ -19,13 +19,7 @@ Route::get('/', function () {
       'Go to the concert'
     ];
 
-    return view('welcome', [
-      //Array
-      'tasks' => $tasks,
-
-      // JS
-      'foo' => '<script>alert("foobar")</script>'
-    ]);
+    return view('welcome')->withTasks($tasks)->withFoo('foo');
 });
 
 Route::get('/about', function () {
