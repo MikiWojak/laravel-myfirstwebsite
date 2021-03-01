@@ -11,7 +11,8 @@
 |
 */
 
-Route::get('/', 'PagesController@home');
+//Since Laravel 8.*.*
+Route::get('/', 'App\Http\Controllers\PagesController@home');
 
 Route::get('/about', function () {
     return view('about');
