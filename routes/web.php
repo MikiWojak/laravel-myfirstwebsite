@@ -13,11 +13,5 @@
 
 //Since Laravel 8.*.*
 Route::get('/', 'App\Http\Controllers\PagesController@home');
-
-Route::get('/about', function () {
-    return view('about');
-});
-
-Route::get('/contact', function () {
-    return view('contact');
-});
+Route::get('/about', 'App\Http\Controllers\PagesController@about');
+Route::get('/contact', 'App\Http\Controllers\PagesController@contact');
